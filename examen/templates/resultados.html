@@ -1,0 +1,10 @@
+<h1>Resultados</h1>
+<p>Tu nota es {{nota}}</p>
+<form action="{% url 'examen:registro' %}" method="post">
+    {% csrf_token %} 
+    <input type="hidden" name="nota" value="{{nota}}"/>
+    Registre dato del alumno<br/>
+    Nombre: <input type="text" name="nombre"/><br/>
+    Email: <input type="text" name="email"/><br/>
+    <input type="submit" value="REGISTRAR NOTA DEL ALUMNO"/>
+</form>
